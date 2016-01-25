@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.graphiti.ui.diagramTypes">
+      <diagramType
+            id="de.tu_bs.cs.isf.mbse.metro.graphiti.diagram"
+            name="Metro Plan"
+            type="metro">
+      </diagramType>
+   </extension>
+   <extension
+         point="org.eclipse.graphiti.ui.diagramTypeProviders">
+      <diagramTypeProvider
+            class="de.tu_bs.cs.isf.mbse.metro.graphiti.MetroDiagramTypeProvider"
+            context="org.eclipse.graphiti.ui.diagramEditor"
+            id="de.tu_bs.cs.isf.mbse.metro.graphiti.diagramTypeProvider"
+            name="Metro Diagram Type Provider">
+         <diagramType
+               id="de.tu_bs.cs.isf.mbse.metro.graphiti.diagram">
+         </diagramType>
+      </diagramTypeProvider>
+   </extension>
+
+</plugin>
