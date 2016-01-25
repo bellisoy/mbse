@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/de.tu_bs.cs.isf.mbse.recipe/src-gen" editDirectory="/de.tu_bs.cs.isf.mbse.recipe.edit/src-gen"
+    editorDirectory="/de.tu_bs.cs.isf.mbse.recipe.editor/src-gen" modelPluginID="de.tu_bs.cs.isf.mbse.recipe"
+    modelName="Recipe" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    testsDirectory="/de.tu_bs.cs.isf.mbse.recipe.tests/src-gen" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="8.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>Recipe.ecore</foreignModel>
+  <genPackages prefix="Recipe" basePackage="de.tu_bs.cs.isf.mbse" disposableProviderFactory="true"
+      ecorePackage="Recipe.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Recipe.ecore#//Food">
+      <genEnumLiterals ecoreEnumLiteral="Recipe.ecore#//Food/VEGGY"/>
+      <genEnumLiterals ecoreEnumLiteral="Recipe.ecore#//Food/ANIMALLY"/>
+      <genEnumLiterals ecoreEnumLiteral="Recipe.ecore#//Food/LIQUID"/>
+      <genEnumLiterals ecoreEnumLiteral="Recipe.ecore#//Food/OTHER"/>
+    </genEnums>
+    <genClasses ecoreClass="Recipe.ecore#//Author">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Recipe.ecore#//Author/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Recipe.ecore#//Author/writes"/>
+    </genClasses>
+    <genClasses ecoreClass="Recipe.ecore#//Workstep">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Recipe.ecore#//Workstep/stepName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Recipe.ecore#//Workstep/stepNumber"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Recipe.ecore#//Workstep/needs"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Recipe.ecore#//Workstep/requires"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Recipe.ecore#//Workstep/isSuccessor"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Recipe.ecore#//Workstep/isPredecessor"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Recipe.ecore#//Workstep/contains"/>
+    </genClasses>
+    <genClasses ecoreClass="Recipe.ecore#//Machine">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Recipe.ecore#//Machine/machineName"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Recipe.ecore#//Machine/neededIn"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Recipe.ecore#//Machine/machinePurpose"/>
+    </genClasses>
+    <genClasses ecoreClass="Recipe.ecore#//Recipe">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Recipe.ecore#//Recipe/title"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Recipe.ecore#//Recipe/calories"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Recipe.ecore#//Recipe/servings"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Recipe.ecore#//Recipe/difficulty"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Recipe.ecore#//Recipe/totalPrice"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Recipe.ecore#//Recipe/category"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Recipe.ecore#//Recipe/workstep"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Recipe.ecore#//Recipe/writtenBy"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Recipe.ecore#//Recipe/duration"/>
+    </genClasses>
+    <genClasses ecoreClass="Recipe.ecore#//Tool">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Recipe.ecore#//Tool/toolName"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Recipe.ecore#//Tool/requiredIn"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Recipe.ecore#//Tool/toolPurpose"/>
+    </genClasses>
+    <genClasses ecoreClass="Recipe.ecore#//Duration">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Recipe.ecore#//Duration/hours"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Recipe.ecore#//Duration/minutes"/>
+    </genClasses>
+    <genClasses ecoreClass="Recipe.ecore#//Ingredient">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Recipe.ecore#//Ingredient/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Recipe.ecore#//Ingredient/quantity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Recipe.ecore#//Ingredient/unit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Recipe.ecore#//Ingredient/price"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Recipe.ecore#//Ingredient/type"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Recipe.ecore#//Ingredient/containedIn"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
