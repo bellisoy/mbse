@@ -14,8 +14,6 @@
         eType="#//Workstep"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="isPredecessor" upperBound="-1"
         eType="#//Workstep"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="duration" upperBound="-1"
-        eType="#//%2C" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="contains" upperBound="-1"
         eType="#//Ingredient" eOpposite="#//Ingredient/containedIn"/>
@@ -54,12 +52,6 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="purpose" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="requiredIn" lowerBound="1"
         upperBound="-1" eType="#//Workstep" eOpposite="#//Workstep/requires"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name=",">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="hours" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
-        defaultValueLiteral="0"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="minutes" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
-        defaultValueLiteral="1"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Ingredient">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

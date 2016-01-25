@@ -20,12 +20,6 @@
               <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
             </endLabelStyleDescription>
           </computedStyleDescriptions>
-          <computedStyleDescriptions xmi:type="style:FlatContainerStyleDescription" xmi:id="_LYP9AL4aEeW4gNvsRhSD3A" arcWidth="8" arcHeight="8" tooltipExpression="service:renderTooltip" roundedCorner="true" widthComputationExpression="12" heightComputationExpression="10" backgroundStyle="Liquid">
-            <borderColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
-            <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
-            <backgroundColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-            <foregroundColor xmi:type="description:UserFixedColor" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@userColorsPalettes[name='Ecore%20Palette']/@entries[name='EClass']"/>
-          </computedStyleDescriptions>
         </data>
       </ownedAnnotationEntries>
       <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_lovqMLZXEeWKi4IRKFUVgw" source="GMF_DIAGRAMS">
@@ -58,9 +52,9 @@
                 <styles xmi:type="notation:FontStyle" xmi:id="_FrDQ8bn5EeWFOrY5qF0L0Q" fontColor="2697711" fontName="Segoe UI" fontHeight="8"/>
                 <layoutConstraint xmi:type="notation:Location" xmi:id="_FrDQ8rn5EeWFOrY5qF0L0Q"/>
               </children>
-              <children xmi:type="notation:Node" xmi:id="_IrmVQL41EeW4gNvsRhSD3A" type="3010" element="_IrN6wL41EeW4gNvsRhSD3A">
-                <styles xmi:type="notation:FontStyle" xmi:id="_IrmVQb41EeW4gNvsRhSD3A" fontColor="2697711" fontName="Segoe UI" fontHeight="8"/>
-                <layoutConstraint xmi:type="notation:Location" xmi:id="_IrmVQr41EeW4gNvsRhSD3A"/>
+              <children xmi:type="notation:Node" xmi:id="_r4k0YMObEeWIlKh272LDNg" type="3010" element="_r31NgMObEeWIlKh272LDNg">
+                <styles xmi:type="notation:FontStyle" xmi:id="_r4k0YcObEeWIlKh272LDNg" fontName="Segoe UI" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_r4k0YsObEeWIlKh272LDNg"/>
               </children>
               <styles xmi:type="notation:SortingStyle" xmi:id="_m-Z1krZXEeWKi4IRKFUVgw"/>
               <styles xmi:type="notation:FilteringStyle" xmi:id="_m-Z1k7ZXEeWKi4IRKFUVgw"/>
@@ -360,13 +354,15 @@
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
         </ownedElements>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_m-Tu8LZXEeWKi4IRKFUVgw" name="Workstep" tooltipText="&#xA;ERROR : There may not be two features named 'duration'" outgoingEdges="_2uTAcLZYEeWKi4IRKFUVgw _78s_ALZYEeWKi4IRKFUVgw _LYoXgL4aEeW4gNvsRhSD3A _jLFgEL4aEeW4gNvsRhSD3A _9e7nUL4aEeW4gNvsRhSD3A" incomingEdges="_2uTAcLZYEeWKi4IRKFUVgw _78s_ALZYEeWKi4IRKFUVgw _0P6dALZZEeWKi4IRKFUVgw" width="12" height="10">
+      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_m-Tu8LZXEeWKi4IRKFUVgw" name="Workstep" tooltipText="" outgoingEdges="_2uTAcLZYEeWKi4IRKFUVgw _78s_ALZYEeWKi4IRKFUVgw _LYoXgL4aEeW4gNvsRhSD3A _jLFgEL4aEeW4gNvsRhSD3A _9e7nUL4aEeW4gNvsRhSD3A" incomingEdges="_2uTAcLZYEeWKi4IRKFUVgw _78s_ALZYEeWKi4IRKFUVgw _0P6dALZZEeWKi4IRKFUVgw" width="12" height="10">
         <target xmi:type="ecore:EClass" href="Recipe.ecore#//Workstep"/>
         <semanticElements xmi:type="ecore:EClass" href="Recipe.ecore#//Workstep"/>
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
         <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
         <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_IrV2kL41EeW4gNvsRhSD3A" labelColor="239,41,41" description="_LYP9AL4aEeW4gNvsRhSD3A" borderColor="239,41,41" backgroundStyle="Liquid" foregroundColor="255,252,216"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_r3rcgMObEeWIlKh272LDNg" backgroundStyle="Liquid" foregroundColor="255,252,216">
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
+        </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
         <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_FsdeULZYEeWKi4IRKFUVgw" name="stepNumber : EInt = 1" tooltipText="">
           <target xmi:type="ecore:EAttribute" href="Recipe.ecore#//Workstep/stepNumber"/>
@@ -384,22 +380,24 @@
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
         </ownedElements>
-        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_IrN6wL41EeW4gNvsRhSD3A" name="duration : EString" tooltipText="">
-          <target xmi:type="ecore:EAttribute" href="Recipe.ecore#//Workstep/duration.1"/>
-          <semanticElements xmi:type="ecore:EAttribute" href="Recipe.ecore#//Workstep/duration.1"/>
-          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_UO5HYL43EeW4gNvsRhSD3A" labelAlignment="LEFT">
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_r31NgMObEeWIlKh272LDNg" name="duration : EString" tooltipText="">
+          <target xmi:type="ecore:EAttribute" href="Recipe.ecore#//Workstep/duration"/>
+          <semanticElements xmi:type="ecore:EAttribute" href="Recipe.ecore#//Workstep/duration"/>
+          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_r3-XcMObEeWIlKh272LDNg" labelAlignment="LEFT">
             <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
         </ownedElements>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_zGSNYLZXEeWKi4IRKFUVgw" name="Machine" tooltipText="&#xA;ERROR : The opposite of the opposite may not be a reference different from this one" incomingEdges="_jLFgEL4aEeW4gNvsRhSD3A" width="12" height="10">
+      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_zGSNYLZXEeWKi4IRKFUVgw" name="Machine" tooltipText="" incomingEdges="_jLFgEL4aEeW4gNvsRhSD3A" width="12" height="10">
         <target xmi:type="ecore:EClass" href="Recipe.ecore#//Machine"/>
         <semanticElements xmi:type="ecore:EClass" href="Recipe.ecore#//Machine"/>
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
         <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
         <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_jKwv8L4aEeW4gNvsRhSD3A" labelColor="239,41,41" description="_LYP9AL4aEeW4gNvsRhSD3A" borderColor="239,41,41" backgroundStyle="Liquid" foregroundColor="255,252,216"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_97akMMOaEeWIlKh272LDNg" backgroundStyle="Liquid" foregroundColor="255,252,216">
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
+        </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
         <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_3DRAULZXEeWKi4IRKFUVgw" name="name : EString" tooltipText="">
           <target xmi:type="ecore:EAttribute" href="Recipe.ecore#//Machine/name"/>
@@ -481,13 +479,15 @@
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
         </ownedElements>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_zcj_YLZXEeWKi4IRKFUVgw" name="Tool" tooltipText="&#xA;ERROR : The opposite of the opposite may not be a reference different from this one" incomingEdges="_9e7nUL4aEeW4gNvsRhSD3A" width="12" height="10">
+      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_zcj_YLZXEeWKi4IRKFUVgw" name="Tool" tooltipText="" incomingEdges="_9e7nUL4aEeW4gNvsRhSD3A" width="12" height="10">
         <target xmi:type="ecore:EClass" href="Recipe.ecore#//Tool"/>
         <semanticElements xmi:type="ecore:EClass" href="Recipe.ecore#//Tool"/>
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
         <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
         <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_9epTcL4aEeW4gNvsRhSD3A" labelColor="239,41,41" description="_LYP9AL4aEeW4gNvsRhSD3A" borderColor="239,41,41" backgroundStyle="Liquid" foregroundColor="255,252,216"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_97akMcOaEeWIlKh272LDNg" backgroundStyle="Liquid" foregroundColor="255,252,216">
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
+        </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
         <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_2vgW0LZXEeWKi4IRKFUVgw" name="name : EString" tooltipText="">
           <target xmi:type="ecore:EAttribute" href="Recipe.ecore#//Tool/name"/>
