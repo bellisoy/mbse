@@ -123,22 +123,13 @@ public interface RecipePackage extends EPackage {
 	int WORKSTEP = 1;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WORKSTEP__NAME = 0;
-
-	/**
 	 * The feature id for the '<em><b>Step Number</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WORKSTEP__STEP_NUMBER = 1;
+	int WORKSTEP__STEP_NUMBER = 0;
 
 	/**
 	 * The feature id for the '<em><b>Is Successor</b></em>' reference list.
@@ -147,7 +138,7 @@ public interface RecipePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WORKSTEP__IS_SUCCESSOR = 2;
+	int WORKSTEP__IS_SUCCESSOR = 1;
 
 	/**
 	 * The feature id for the '<em><b>Is Predecessor</b></em>' reference list.
@@ -156,16 +147,7 @@ public interface RecipePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WORKSTEP__IS_PREDECESSOR = 3;
-
-	/**
-	 * The feature id for the '<em><b>Duration</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WORKSTEP__DURATION = 4;
+	int WORKSTEP__IS_PREDECESSOR = 2;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -174,7 +156,7 @@ public interface RecipePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WORKSTEP__DESCRIPTION = 5;
+	int WORKSTEP__DESCRIPTION = 3;
 
 	/**
 	 * The feature id for the '<em><b>Contains</b></em>' reference list.
@@ -183,7 +165,7 @@ public interface RecipePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WORKSTEP__CONTAINS = 6;
+	int WORKSTEP__CONTAINS = 4;
 
 	/**
 	 * The feature id for the '<em><b>Needs</b></em>' reference list.
@@ -192,7 +174,7 @@ public interface RecipePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WORKSTEP__NEEDS = 7;
+	int WORKSTEP__NEEDS = 5;
 
 	/**
 	 * The feature id for the '<em><b>Requires</b></em>' reference list.
@@ -201,7 +183,16 @@ public interface RecipePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WORKSTEP__REQUIRES = 8;
+	int WORKSTEP__REQUIRES = 6;
+
+	/**
+	 * The feature id for the '<em><b>Duration</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORKSTEP__DURATION = 7;
 
 	/**
 	 * The number of structural features of the '<em>Workstep</em>' class.
@@ -210,7 +201,7 @@ public interface RecipePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WORKSTEP_FEATURE_COUNT = 9;
+	int WORKSTEP_FEATURE_COUNT = 8;
 
 	/**
 	 * The number of operations of the '<em>Workstep</em>' class.
@@ -332,22 +323,13 @@ public interface RecipePackage extends EPackage {
 	int RECIPE__TOTAL_PRICE = 4;
 
 	/**
-	 * The feature id for the '<em><b>Category</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RECIPE__CATEGORY = 5;
-
-	/**
 	 * The feature id for the '<em><b>Workstep</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RECIPE__WORKSTEP = 6;
+	int RECIPE__WORKSTEP = 5;
 
 	/**
 	 * The feature id for the '<em><b>Total Duration</b></em>' attribute.
@@ -356,7 +338,7 @@ public interface RecipePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RECIPE__TOTAL_DURATION = 7;
+	int RECIPE__TOTAL_DURATION = 6;
 
 	/**
 	 * The feature id for the '<em><b>Written By</b></em>' reference.
@@ -365,7 +347,16 @@ public interface RecipePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RECIPE__WRITTEN_BY = 8;
+	int RECIPE__WRITTEN_BY = 7;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RECIPE__TYPE = 8;
 
 	/**
 	 * The number of structural features of the '<em>Recipe</em>' class.
@@ -441,52 +432,6 @@ public interface RecipePackage extends EPackage {
 	int TOOL_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link de.tu_bs.cs.isf.mbse.recipe.impl.DurationImpl <em>Duration</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see de.tu_bs.cs.isf.mbse.recipe.impl.DurationImpl
-	 * @see de.tu_bs.cs.isf.mbse.recipe.impl.RecipePackageImpl#getDuration()
-	 * @generated
-	 */
-	int DURATION = 5;
-
-	/**
-	 * The feature id for the '<em><b>Hours</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DURATION__HOURS = 0;
-
-	/**
-	 * The feature id for the '<em><b>Minutes</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DURATION__MINUTES = 1;
-
-	/**
-	 * The number of structural features of the '<em>Duration</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DURATION_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>Duration</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DURATION_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link de.tu_bs.cs.isf.mbse.recipe.impl.IngredientImpl <em>Ingredient</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -494,7 +439,7 @@ public interface RecipePackage extends EPackage {
 	 * @see de.tu_bs.cs.isf.mbse.recipe.impl.RecipePackageImpl#getIngredient()
 	 * @generated
 	 */
-	int INGREDIENT = 6;
+	int INGREDIENT = 5;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -576,7 +521,18 @@ public interface RecipePackage extends EPackage {
 	 * @see de.tu_bs.cs.isf.mbse.recipe.impl.RecipePackageImpl#getFood()
 	 * @generated
 	 */
-	int FOOD = 7;
+	int FOOD = 6;
+
+
+	/**
+	 * The meta object id for the '{@link de.tu_bs.cs.isf.mbse.recipe.RecipeType <em>Type</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.tu_bs.cs.isf.mbse.recipe.RecipeType
+	 * @see de.tu_bs.cs.isf.mbse.recipe.impl.RecipePackageImpl#getRecipeType()
+	 * @generated
+	 */
+	int RECIPE_TYPE = 7;
 
 
 	/**
@@ -631,17 +587,6 @@ public interface RecipePackage extends EPackage {
 	 * @generated
 	 */
 	EClass getWorkstep();
-
-	/**
-	 * Returns the meta object for the attribute '{@link de.tu_bs.cs.isf.mbse.recipe.Workstep#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see de.tu_bs.cs.isf.mbse.recipe.Workstep#getName()
-	 * @see #getWorkstep()
-	 * @generated
-	 */
-	EAttribute getWorkstep_Name();
 
 	/**
 	 * Returns the meta object for the attribute '{@link de.tu_bs.cs.isf.mbse.recipe.Workstep#getStepNumber <em>Step Number</em>}'.
@@ -710,15 +655,15 @@ public interface RecipePackage extends EPackage {
 	EReference getWorkstep_Contains();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link de.tu_bs.cs.isf.mbse.recipe.Workstep#getDuration <em>Duration</em>}'.
+	 * Returns the meta object for the attribute '{@link de.tu_bs.cs.isf.mbse.recipe.Workstep#getDuration <em>Duration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Duration</em>'.
+	 * @return the meta object for the attribute '<em>Duration</em>'.
 	 * @see de.tu_bs.cs.isf.mbse.recipe.Workstep#getDuration()
 	 * @see #getWorkstep()
 	 * @generated
 	 */
-	EReference getWorkstep_Duration();
+	EAttribute getWorkstep_Duration();
 
 	/**
 	 * Returns the meta object for the attribute '{@link de.tu_bs.cs.isf.mbse.recipe.Workstep#getDescription <em>Description</em>}'.
@@ -840,17 +785,6 @@ public interface RecipePackage extends EPackage {
 	EAttribute getRecipe_TotalPrice();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.tu_bs.cs.isf.mbse.recipe.Recipe#getCategory <em>Category</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Category</em>'.
-	 * @see de.tu_bs.cs.isf.mbse.recipe.Recipe#getCategory()
-	 * @see #getRecipe()
-	 * @generated
-	 */
-	EAttribute getRecipe_Category();
-
-	/**
 	 * Returns the meta object for the containment reference list '{@link de.tu_bs.cs.isf.mbse.recipe.Recipe#getWorkstep <em>Workstep</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -871,6 +805,17 @@ public interface RecipePackage extends EPackage {
 	 * @generated
 	 */
 	EReference getRecipe_WrittenBy();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.tu_bs.cs.isf.mbse.recipe.Recipe#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see de.tu_bs.cs.isf.mbse.recipe.Recipe#getType()
+	 * @see #getRecipe()
+	 * @generated
+	 */
+	EAttribute getRecipe_Type();
 
 	/**
 	 * Returns the meta object for the attribute '{@link de.tu_bs.cs.isf.mbse.recipe.Recipe#getTotalDuration <em>Total Duration</em>}'.
@@ -925,38 +870,6 @@ public interface RecipePackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getTool_Purpose();
-
-	/**
-	 * Returns the meta object for class '{@link de.tu_bs.cs.isf.mbse.recipe.Duration <em>Duration</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Duration</em>'.
-	 * @see de.tu_bs.cs.isf.mbse.recipe.Duration
-	 * @generated
-	 */
-	EClass getDuration();
-
-	/**
-	 * Returns the meta object for the attribute '{@link de.tu_bs.cs.isf.mbse.recipe.Duration#getHours <em>Hours</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Hours</em>'.
-	 * @see de.tu_bs.cs.isf.mbse.recipe.Duration#getHours()
-	 * @see #getDuration()
-	 * @generated
-	 */
-	EAttribute getDuration_Hours();
-
-	/**
-	 * Returns the meta object for the attribute '{@link de.tu_bs.cs.isf.mbse.recipe.Duration#getMinutes <em>Minutes</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Minutes</em>'.
-	 * @see de.tu_bs.cs.isf.mbse.recipe.Duration#getMinutes()
-	 * @see #getDuration()
-	 * @generated
-	 */
-	EAttribute getDuration_Minutes();
 
 	/**
 	 * Returns the meta object for class '{@link de.tu_bs.cs.isf.mbse.recipe.Ingredient <em>Ingredient</em>}'.
@@ -1045,6 +958,16 @@ public interface RecipePackage extends EPackage {
 	EEnum getFood();
 
 	/**
+	 * Returns the meta object for enum '{@link de.tu_bs.cs.isf.mbse.recipe.RecipeType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Type</em>'.
+	 * @see de.tu_bs.cs.isf.mbse.recipe.RecipeType
+	 * @generated
+	 */
+	EEnum getRecipeType();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1112,14 +1035,6 @@ public interface RecipePackage extends EPackage {
 		EClass WORKSTEP = eINSTANCE.getWorkstep();
 
 		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute WORKSTEP__NAME = eINSTANCE.getWorkstep_Name();
-
-		/**
 		 * The meta object literal for the '<em><b>Step Number</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1168,12 +1083,12 @@ public interface RecipePackage extends EPackage {
 		EReference WORKSTEP__CONTAINS = eINSTANCE.getWorkstep_Contains();
 
 		/**
-		 * The meta object literal for the '<em><b>Duration</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Duration</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference WORKSTEP__DURATION = eINSTANCE.getWorkstep_Duration();
+		EAttribute WORKSTEP__DURATION = eINSTANCE.getWorkstep_Duration();
 
 		/**
 		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
@@ -1268,14 +1183,6 @@ public interface RecipePackage extends EPackage {
 		EAttribute RECIPE__TOTAL_PRICE = eINSTANCE.getRecipe_TotalPrice();
 
 		/**
-		 * The meta object literal for the '<em><b>Category</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute RECIPE__CATEGORY = eINSTANCE.getRecipe_Category();
-
-		/**
 		 * The meta object literal for the '<em><b>Workstep</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1290,6 +1197,14 @@ public interface RecipePackage extends EPackage {
 		 * @generated
 		 */
 		EReference RECIPE__WRITTEN_BY = eINSTANCE.getRecipe_WrittenBy();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute RECIPE__TYPE = eINSTANCE.getRecipe_Type();
 
 		/**
 		 * The meta object literal for the '<em><b>Total Duration</b></em>' attribute feature.
@@ -1332,32 +1247,6 @@ public interface RecipePackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute TOOL__PURPOSE = eINSTANCE.getTool_Purpose();
-
-		/**
-		 * The meta object literal for the '{@link de.tu_bs.cs.isf.mbse.recipe.impl.DurationImpl <em>Duration</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see de.tu_bs.cs.isf.mbse.recipe.impl.DurationImpl
-		 * @see de.tu_bs.cs.isf.mbse.recipe.impl.RecipePackageImpl#getDuration()
-		 * @generated
-		 */
-		EClass DURATION = eINSTANCE.getDuration();
-
-		/**
-		 * The meta object literal for the '<em><b>Hours</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute DURATION__HOURS = eINSTANCE.getDuration_Hours();
-
-		/**
-		 * The meta object literal for the '<em><b>Minutes</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute DURATION__MINUTES = eINSTANCE.getDuration_Minutes();
 
 		/**
 		 * The meta object literal for the '{@link de.tu_bs.cs.isf.mbse.recipe.impl.IngredientImpl <em>Ingredient</em>}' class.
@@ -1426,6 +1315,16 @@ public interface RecipePackage extends EPackage {
 		 * @generated
 		 */
 		EEnum FOOD = eINSTANCE.getFood();
+
+		/**
+		 * The meta object literal for the '{@link de.tu_bs.cs.isf.mbse.recipe.RecipeType <em>Type</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.tu_bs.cs.isf.mbse.recipe.RecipeType
+		 * @see de.tu_bs.cs.isf.mbse.recipe.impl.RecipePackageImpl#getRecipeType()
+		 * @generated
+		 */
+		EEnum RECIPE_TYPE = eINSTANCE.getRecipeType();
 
 	}
 

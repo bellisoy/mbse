@@ -62,7 +62,6 @@ public class RecipeFactoryImpl extends EFactoryImpl implements RecipeFactory {
 			case RecipePackage.MACHINE: return createMachine();
 			case RecipePackage.RECIPE: return createRecipe();
 			case RecipePackage.TOOL: return createTool();
-			case RecipePackage.DURATION: return createDuration();
 			case RecipePackage.INGREDIENT: return createIngredient();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
@@ -79,6 +78,8 @@ public class RecipeFactoryImpl extends EFactoryImpl implements RecipeFactory {
 		switch (eDataType.getClassifierID()) {
 			case RecipePackage.FOOD:
 				return createFoodFromString(eDataType, initialValue);
+			case RecipePackage.RECIPE_TYPE:
+				return createRecipeTypeFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -94,6 +95,8 @@ public class RecipeFactoryImpl extends EFactoryImpl implements RecipeFactory {
 		switch (eDataType.getClassifierID()) {
 			case RecipePackage.FOOD:
 				return convertFoodToString(eDataType, instanceValue);
+			case RecipePackage.RECIPE_TYPE:
+				return convertRecipeTypeToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -154,16 +157,6 @@ public class RecipeFactoryImpl extends EFactoryImpl implements RecipeFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Duration createDuration() {
-		DurationImpl duration = new DurationImpl();
-		return duration;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public Ingredient createIngredient() {
 		IngredientImpl ingredient = new IngredientImpl();
 		return ingredient;
@@ -186,6 +179,26 @@ public class RecipeFactoryImpl extends EFactoryImpl implements RecipeFactory {
 	 * @generated
 	 */
 	public String convertFoodToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public RecipeType createRecipeTypeFromString(EDataType eDataType, String initialValue) {
+		RecipeType result = RecipeType.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertRecipeTypeToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

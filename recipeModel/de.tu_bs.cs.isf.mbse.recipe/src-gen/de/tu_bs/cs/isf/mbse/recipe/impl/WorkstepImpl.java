@@ -2,7 +2,6 @@
  */
 package de.tu_bs.cs.isf.mbse.recipe.impl;
 
-import de.tu_bs.cs.isf.mbse.recipe.Duration;
 import de.tu_bs.cs.isf.mbse.recipe.Ingredient;
 import de.tu_bs.cs.isf.mbse.recipe.Machine;
 import de.tu_bs.cs.isf.mbse.recipe.RecipePackage;
@@ -21,8 +20,6 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -35,40 +32,19 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link de.tu_bs.cs.isf.mbse.recipe.impl.WorkstepImpl#getName <em>Name</em>}</li>
  *   <li>{@link de.tu_bs.cs.isf.mbse.recipe.impl.WorkstepImpl#getStepNumber <em>Step Number</em>}</li>
  *   <li>{@link de.tu_bs.cs.isf.mbse.recipe.impl.WorkstepImpl#getIsSuccessor <em>Is Successor</em>}</li>
  *   <li>{@link de.tu_bs.cs.isf.mbse.recipe.impl.WorkstepImpl#getIsPredecessor <em>Is Predecessor</em>}</li>
- *   <li>{@link de.tu_bs.cs.isf.mbse.recipe.impl.WorkstepImpl#getDuration <em>Duration</em>}</li>
  *   <li>{@link de.tu_bs.cs.isf.mbse.recipe.impl.WorkstepImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link de.tu_bs.cs.isf.mbse.recipe.impl.WorkstepImpl#getContains <em>Contains</em>}</li>
  *   <li>{@link de.tu_bs.cs.isf.mbse.recipe.impl.WorkstepImpl#getNeeds <em>Needs</em>}</li>
  *   <li>{@link de.tu_bs.cs.isf.mbse.recipe.impl.WorkstepImpl#getRequires <em>Requires</em>}</li>
+ *   <li>{@link de.tu_bs.cs.isf.mbse.recipe.impl.WorkstepImpl#getDuration <em>Duration</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class WorkstepImpl extends MinimalEObjectImpl.Container implements Workstep {
-	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String NAME_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
-
 	/**
 	 * The default value of the '{@link #getStepNumber() <em>Step Number</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -108,16 +84,6 @@ public class WorkstepImpl extends MinimalEObjectImpl.Container implements Workst
 	 * @ordered
 	 */
 	protected EList<Workstep> isPredecessor;
-
-	/**
-	 * The cached value of the '{@link #getDuration() <em>Duration</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDuration()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Duration> duration;
 
 	/**
 	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
@@ -170,6 +136,26 @@ public class WorkstepImpl extends MinimalEObjectImpl.Container implements Workst
 	protected EList<Tool> requires;
 
 	/**
+	 * The default value of the '{@link #getDuration() <em>Duration</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDuration()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DURATION_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getDuration() <em>Duration</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDuration()
+	 * @generated
+	 * @ordered
+	 */
+	protected String duration = DURATION_EDEFAULT;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -186,27 +172,6 @@ public class WorkstepImpl extends MinimalEObjectImpl.Container implements Workst
 	@Override
 	protected EClass eStaticClass() {
 		return RecipePackage.Literals.WORKSTEP;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getName() {
-		return name;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, RecipePackage.WORKSTEP__NAME, oldName, name));
 	}
 
 	/**
@@ -295,11 +260,20 @@ public class WorkstepImpl extends MinimalEObjectImpl.Container implements Workst
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Duration> getDuration() {
-		if (duration == null) {
-			duration = new EObjectContainmentEList<Duration>(Duration.class, this, RecipePackage.WORKSTEP__DURATION);
-		}
+	public String getDuration() {
 		return duration;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDuration(String newDuration) {
+		String oldDuration = duration;
+		duration = newDuration;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, RecipePackage.WORKSTEP__DURATION, oldDuration, duration));
 	}
 
 	/**
@@ -350,8 +324,6 @@ public class WorkstepImpl extends MinimalEObjectImpl.Container implements Workst
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case RecipePackage.WORKSTEP__DURATION:
-				return ((InternalEList<?>)getDuration()).basicRemove(otherEnd, msgs);
 			case RecipePackage.WORKSTEP__CONTAINS:
 				return ((InternalEList<?>)getContains()).basicRemove(otherEnd, msgs);
 			case RecipePackage.WORKSTEP__NEEDS:
@@ -370,16 +342,12 @@ public class WorkstepImpl extends MinimalEObjectImpl.Container implements Workst
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case RecipePackage.WORKSTEP__NAME:
-				return getName();
 			case RecipePackage.WORKSTEP__STEP_NUMBER:
 				return getStepNumber();
 			case RecipePackage.WORKSTEP__IS_SUCCESSOR:
 				return getIsSuccessor();
 			case RecipePackage.WORKSTEP__IS_PREDECESSOR:
 				return getIsPredecessor();
-			case RecipePackage.WORKSTEP__DURATION:
-				return getDuration();
 			case RecipePackage.WORKSTEP__DESCRIPTION:
 				return getDescription();
 			case RecipePackage.WORKSTEP__CONTAINS:
@@ -388,6 +356,8 @@ public class WorkstepImpl extends MinimalEObjectImpl.Container implements Workst
 				return getNeeds();
 			case RecipePackage.WORKSTEP__REQUIRES:
 				return getRequires();
+			case RecipePackage.WORKSTEP__DURATION:
+				return getDuration();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -401,9 +371,6 @@ public class WorkstepImpl extends MinimalEObjectImpl.Container implements Workst
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case RecipePackage.WORKSTEP__NAME:
-				setName((String)newValue);
-				return;
 			case RecipePackage.WORKSTEP__STEP_NUMBER:
 				setStepNumber((Integer)newValue);
 				return;
@@ -414,10 +381,6 @@ public class WorkstepImpl extends MinimalEObjectImpl.Container implements Workst
 			case RecipePackage.WORKSTEP__IS_PREDECESSOR:
 				getIsPredecessor().clear();
 				getIsPredecessor().addAll((Collection<? extends Workstep>)newValue);
-				return;
-			case RecipePackage.WORKSTEP__DURATION:
-				getDuration().clear();
-				getDuration().addAll((Collection<? extends Duration>)newValue);
 				return;
 			case RecipePackage.WORKSTEP__DESCRIPTION:
 				setDescription((String)newValue);
@@ -434,6 +397,9 @@ public class WorkstepImpl extends MinimalEObjectImpl.Container implements Workst
 				getRequires().clear();
 				getRequires().addAll((Collection<? extends Tool>)newValue);
 				return;
+			case RecipePackage.WORKSTEP__DURATION:
+				setDuration((String)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -446,9 +412,6 @@ public class WorkstepImpl extends MinimalEObjectImpl.Container implements Workst
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case RecipePackage.WORKSTEP__NAME:
-				setName(NAME_EDEFAULT);
-				return;
 			case RecipePackage.WORKSTEP__STEP_NUMBER:
 				setStepNumber(STEP_NUMBER_EDEFAULT);
 				return;
@@ -457,9 +420,6 @@ public class WorkstepImpl extends MinimalEObjectImpl.Container implements Workst
 				return;
 			case RecipePackage.WORKSTEP__IS_PREDECESSOR:
 				getIsPredecessor().clear();
-				return;
-			case RecipePackage.WORKSTEP__DURATION:
-				getDuration().clear();
 				return;
 			case RecipePackage.WORKSTEP__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
@@ -473,6 +433,9 @@ public class WorkstepImpl extends MinimalEObjectImpl.Container implements Workst
 			case RecipePackage.WORKSTEP__REQUIRES:
 				getRequires().clear();
 				return;
+			case RecipePackage.WORKSTEP__DURATION:
+				setDuration(DURATION_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -485,16 +448,12 @@ public class WorkstepImpl extends MinimalEObjectImpl.Container implements Workst
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case RecipePackage.WORKSTEP__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case RecipePackage.WORKSTEP__STEP_NUMBER:
 				return stepNumber != STEP_NUMBER_EDEFAULT;
 			case RecipePackage.WORKSTEP__IS_SUCCESSOR:
 				return isSuccessor != null && !isSuccessor.isEmpty();
 			case RecipePackage.WORKSTEP__IS_PREDECESSOR:
 				return isPredecessor != null && !isPredecessor.isEmpty();
-			case RecipePackage.WORKSTEP__DURATION:
-				return duration != null && !duration.isEmpty();
 			case RecipePackage.WORKSTEP__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 			case RecipePackage.WORKSTEP__CONTAINS:
@@ -503,6 +462,8 @@ public class WorkstepImpl extends MinimalEObjectImpl.Container implements Workst
 				return needs != null && !needs.isEmpty();
 			case RecipePackage.WORKSTEP__REQUIRES:
 				return requires != null && !requires.isEmpty();
+			case RecipePackage.WORKSTEP__DURATION:
+				return DURATION_EDEFAULT == null ? duration != null : !DURATION_EDEFAULT.equals(duration);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -517,12 +478,12 @@ public class WorkstepImpl extends MinimalEObjectImpl.Container implements Workst
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: ");
-		result.append(name);
-		result.append(", stepNumber: ");
+		result.append(" (stepNumber: ");
 		result.append(stepNumber);
 		result.append(", description: ");
 		result.append(description);
+		result.append(", duration: ");
+		result.append(duration);
 		result.append(')');
 		return result.toString();
 	}

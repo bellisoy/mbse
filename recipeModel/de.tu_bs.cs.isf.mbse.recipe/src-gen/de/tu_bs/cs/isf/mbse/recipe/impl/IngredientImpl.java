@@ -130,7 +130,7 @@ public class IngredientImpl extends MinimalEObjectImpl.Container implements Ingr
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Food TYPE_EDEFAULT = Food.VEGGY;
+	protected static final Food TYPE_EDEFAULT = Food.VEGETERIAN;
 
 	/**
 	 * The cached value of the '{@link #getType() <em>Type</em>}' attribute.

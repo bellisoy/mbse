@@ -20,10 +20,10 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link de.tu_bs.cs.isf.mbse.recipe.Recipe#getServings <em>Servings</em>}</li>
  *   <li>{@link de.tu_bs.cs.isf.mbse.recipe.Recipe#getDifficulty <em>Difficulty</em>}</li>
  *   <li>{@link de.tu_bs.cs.isf.mbse.recipe.Recipe#getTotalPrice <em>Total Price</em>}</li>
- *   <li>{@link de.tu_bs.cs.isf.mbse.recipe.Recipe#getCategory <em>Category</em>}</li>
  *   <li>{@link de.tu_bs.cs.isf.mbse.recipe.Recipe#getWorkstep <em>Workstep</em>}</li>
  *   <li>{@link de.tu_bs.cs.isf.mbse.recipe.Recipe#getTotalDuration <em>Total Duration</em>}</li>
  *   <li>{@link de.tu_bs.cs.isf.mbse.recipe.Recipe#getWrittenBy <em>Written By</em>}</li>
+ *   <li>{@link de.tu_bs.cs.isf.mbse.recipe.Recipe#getType <em>Type</em>}</li>
  * </ul>
  *
  * @see de.tu_bs.cs.isf.mbse.recipe.RecipePackage#getRecipe()
@@ -165,32 +165,6 @@ public interface Recipe extends EObject {
 	void setTotalPrice(double value);
 
 	/**
-	 * Returns the value of the '<em><b>Category</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Category</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Category</em>' attribute.
-	 * @see #setCategory(String)
-	 * @see de.tu_bs.cs.isf.mbse.recipe.RecipePackage#getRecipe_Category()
-	 * @model derived="true"
-	 * @generated
-	 */
-	String getCategory();
-
-	/**
-	 * Sets the value of the '{@link de.tu_bs.cs.isf.mbse.recipe.Recipe#getCategory <em>Category</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Category</em>' attribute.
-	 * @see #getCategory()
-	 * @generated
-	 */
-	void setCategory(String value);
-
-	/**
 	 * Returns the value of the '<em><b>Workstep</b></em>' containment reference list.
 	 * The list contents are of type {@link de.tu_bs.cs.isf.mbse.recipe.Workstep}.
 	 * <!-- begin-user-doc -->
@@ -233,6 +207,35 @@ public interface Recipe extends EObject {
 	 * @generated
 	 */
 	void setWrittenBy(Author value);
+
+	/**
+	 * Returns the value of the '<em><b>Type</b></em>' attribute.
+	 * The literals are from the enumeration {@link de.tu_bs.cs.isf.mbse.recipe.RecipeType}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Type</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Type</em>' attribute.
+	 * @see de.tu_bs.cs.isf.mbse.recipe.RecipeType
+	 * @see #setType(RecipeType)
+	 * @see de.tu_bs.cs.isf.mbse.recipe.RecipePackage#getRecipe_Type()
+	 * @model
+	 * @generated
+	 */
+	RecipeType getType();
+
+	/**
+	 * Sets the value of the '{@link de.tu_bs.cs.isf.mbse.recipe.Recipe#getType <em>Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Type</em>' attribute.
+	 * @see de.tu_bs.cs.isf.mbse.recipe.RecipeType
+	 * @see #getType()
+	 * @generated
+	 */
+	void setType(RecipeType value);
 
 	/**
 	 * Returns the value of the '<em><b>Total Duration</b></em>' attribute.

@@ -19,104 +19,121 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum Food implements Enumerator {
 	/**
-	 * The '<em><b>VEGGY</b></em>' literal object.
+	 * The '<em><b>VEGETERIAN</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #VEGGY_VALUE
+	 * @see #VEGETERIAN_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	VEGGY(0, "VEGGY", "VEGGY"),
-
-	/**
-	 * The '<em><b>ANIMALLY</b></em>' literal object.
+	VEGETERIAN(0, "VEGETERIAN", "VEGETERIAN"), /**
+	 * The '<em><b>VEGAN</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ANIMALLY_VALUE
+	 * @see #VEGAN_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	ANIMALLY(1, "ANIMALLY", "ANIMALLY"),
-
-	/**
-	 * The '<em><b>LIQUID</b></em>' literal object.
+	VEGAN(2, "VEGAN", "VEGAN"), /**
+	 * The '<em><b>POULTRY</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #LIQUID_VALUE
+	 * @see #POULTRY_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	LIQUID(2, "LIQUID", "LIQUID"),
-
-	/**
-	 * The '<em><b>OTHER</b></em>' literal object.
+	POULTRY(3, "POULTRY", "POULTRY"), /**
+	 * The '<em><b>FISH</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #OTHER_VALUE
+	 * @see #FISH_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	OTHER(3, "OTHER", "OTHER");
+	FISH(4, "FISH", "FISH"), /**
+	 * The '<em><b>MEAT</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #MEAT_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	MEAT(4, "MEAT", "MEAT");
 
 	/**
-	 * The '<em><b>VEGGY</b></em>' literal value.
+	 * The '<em><b>VEGETERIAN</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of '<em><b>VEGGY</b></em>' literal object isn't clear,
+	 * If the meaning of '<em><b>VEGETERIAN</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #VEGGY
+	 * @see #VEGETERIAN
 	 * @model
 	 * @generated
 	 * @ordered
 	 */
-	public static final int VEGGY_VALUE = 0;
+	public static final int VEGETERIAN_VALUE = 0;
 
 	/**
-	 * The '<em><b>ANIMALLY</b></em>' literal value.
+	 * The '<em><b>VEGAN</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of '<em><b>ANIMALLY</b></em>' literal object isn't clear,
+	 * If the meaning of '<em><b>VEGAN</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #ANIMALLY
+	 * @see #VEGAN
 	 * @model
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ANIMALLY_VALUE = 1;
+	public static final int VEGAN_VALUE = 2;
 
 	/**
-	 * The '<em><b>LIQUID</b></em>' literal value.
+	 * The '<em><b>POULTRY</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of '<em><b>LIQUID</b></em>' literal object isn't clear,
+	 * If the meaning of '<em><b>POULTRY</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #LIQUID
+	 * @see #POULTRY
 	 * @model
 	 * @generated
 	 * @ordered
 	 */
-	public static final int LIQUID_VALUE = 2;
+	public static final int POULTRY_VALUE = 3;
 
 	/**
-	 * The '<em><b>OTHER</b></em>' literal value.
+	 * The '<em><b>FISH</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of '<em><b>OTHER</b></em>' literal object isn't clear,
+	 * If the meaning of '<em><b>FISH</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #OTHER
+	 * @see #FISH
 	 * @model
 	 * @generated
 	 * @ordered
 	 */
-	public static final int OTHER_VALUE = 3;
+	public static final int FISH_VALUE = 4;
+
+	/**
+	 * The '<em><b>MEAT</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>MEAT</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #MEAT
+	 * @model
+	 * @generated
+	 * @ordered
+	 */
+	public static final int MEAT_VALUE = 4;
 
 	/**
 	 * An array of all the '<em><b>Food</b></em>' enumerators.
@@ -126,10 +143,11 @@ public enum Food implements Enumerator {
 	 */
 	private static final Food[] VALUES_ARRAY =
 		new Food[] {
-			VEGGY,
-			ANIMALLY,
-			LIQUID,
-			OTHER,
+			VEGETERIAN,
+			VEGAN,
+			POULTRY,
+			FISH,
+			MEAT,
 		};
 
 	/**
@@ -186,10 +204,10 @@ public enum Food implements Enumerator {
 	 */
 	public static Food get(int value) {
 		switch (value) {
-			case VEGGY_VALUE: return VEGGY;
-			case ANIMALLY_VALUE: return ANIMALLY;
-			case LIQUID_VALUE: return LIQUID;
-			case OTHER_VALUE: return OTHER;
+			case VEGETERIAN_VALUE: return VEGETERIAN;
+			case VEGAN_VALUE: return VEGAN;
+			case POULTRY_VALUE: return POULTRY;
+			case FISH_VALUE: return FISH;
 		}
 		return null;
 	}

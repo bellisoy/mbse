@@ -88,10 +88,6 @@ public class RecipeAdapterFactory extends AdapterFactoryImpl {
 				return createToolAdapter();
 			}
 			@Override
-			public Adapter caseDuration(Duration object) {
-				return createDurationAdapter();
-			}
-			@Override
 			public Adapter caseIngredient(Ingredient object) {
 				return createIngredientAdapter();
 			}
@@ -182,20 +178,6 @@ public class RecipeAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createToolAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link de.tu_bs.cs.isf.mbse.recipe.Duration <em>Duration</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see de.tu_bs.cs.isf.mbse.recipe.Duration
-	 * @generated
-	 */
-	public Adapter createDurationAdapter() {
 		return null;
 	}
 

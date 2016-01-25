@@ -3,13 +3,13 @@
 package de.tu_bs.cs.isf.mbse.recipe.impl;
 
 import de.tu_bs.cs.isf.mbse.recipe.Author;
-import de.tu_bs.cs.isf.mbse.recipe.Duration;
 import de.tu_bs.cs.isf.mbse.recipe.Food;
 import de.tu_bs.cs.isf.mbse.recipe.Ingredient;
 import de.tu_bs.cs.isf.mbse.recipe.Machine;
 import de.tu_bs.cs.isf.mbse.recipe.Recipe;
 import de.tu_bs.cs.isf.mbse.recipe.RecipeFactory;
 import de.tu_bs.cs.isf.mbse.recipe.RecipePackage;
+import de.tu_bs.cs.isf.mbse.recipe.RecipeType;
 import de.tu_bs.cs.isf.mbse.recipe.Tool;
 import de.tu_bs.cs.isf.mbse.recipe.Workstep;
 
@@ -68,13 +68,6 @@ public class RecipePackageImpl extends EPackageImpl implements RecipePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass durationEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass ingredientEClass = null;
 
 	/**
@@ -83,6 +76,13 @@ public class RecipePackageImpl extends EPackageImpl implements RecipePackage {
 	 * @generated
 	 */
 	private EEnum foodEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum recipeTypeEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -195,7 +195,7 @@ public class RecipePackageImpl extends EPackageImpl implements RecipePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getWorkstep_Name() {
+	public EAttribute getWorkstep_StepNumber() {
 		return (EAttribute)workstepEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -204,17 +204,8 @@ public class RecipePackageImpl extends EPackageImpl implements RecipePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getWorkstep_StepNumber() {
-		return (EAttribute)workstepEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getWorkstep_Needs() {
-		return (EReference)workstepEClass.getEStructuralFeatures().get(7);
+		return (EReference)workstepEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -223,33 +214,6 @@ public class RecipePackageImpl extends EPackageImpl implements RecipePackage {
 	 * @generated
 	 */
 	public EReference getWorkstep_Requires() {
-		return (EReference)workstepEClass.getEStructuralFeatures().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getWorkstep_IsSuccessor() {
-		return (EReference)workstepEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getWorkstep_IsPredecessor() {
-		return (EReference)workstepEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getWorkstep_Contains() {
 		return (EReference)workstepEClass.getEStructuralFeatures().get(6);
 	}
 
@@ -258,7 +222,25 @@ public class RecipePackageImpl extends EPackageImpl implements RecipePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getWorkstep_Duration() {
+	public EReference getWorkstep_IsSuccessor() {
+		return (EReference)workstepEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getWorkstep_IsPredecessor() {
+		return (EReference)workstepEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getWorkstep_Contains() {
 		return (EReference)workstepEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -267,8 +249,17 @@ public class RecipePackageImpl extends EPackageImpl implements RecipePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getWorkstep_Duration() {
+		return (EAttribute)workstepEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EAttribute getWorkstep_Description() {
-		return (EAttribute)workstepEClass.getEStructuralFeatures().get(5);
+		return (EAttribute)workstepEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -366,17 +357,8 @@ public class RecipePackageImpl extends EPackageImpl implements RecipePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getRecipe_Category() {
-		return (EAttribute)recipeEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getRecipe_Workstep() {
-		return (EReference)recipeEClass.getEStructuralFeatures().get(6);
+		return (EReference)recipeEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -385,7 +367,16 @@ public class RecipePackageImpl extends EPackageImpl implements RecipePackage {
 	 * @generated
 	 */
 	public EReference getRecipe_WrittenBy() {
-		return (EReference)recipeEClass.getEStructuralFeatures().get(8);
+		return (EReference)recipeEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getRecipe_Type() {
+		return (EAttribute)recipeEClass.getEStructuralFeatures().get(8);
 	}
 
 	/**
@@ -394,7 +385,7 @@ public class RecipePackageImpl extends EPackageImpl implements RecipePackage {
 	 * @generated
 	 */
 	public EAttribute getRecipe_TotalDuration() {
-		return (EAttribute)recipeEClass.getEStructuralFeatures().get(7);
+		return (EAttribute)recipeEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -431,33 +422,6 @@ public class RecipePackageImpl extends EPackageImpl implements RecipePackage {
 	 */
 	public EAttribute getTool_Purpose() {
 		return (EAttribute)toolEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getDuration() {
-		return durationEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getDuration_Hours() {
-		return (EAttribute)durationEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getDuration_Minutes() {
-		return (EAttribute)durationEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -537,6 +501,15 @@ public class RecipePackageImpl extends EPackageImpl implements RecipePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EEnum getRecipeType() {
+		return recipeTypeEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public RecipeFactory getRecipeFactory() {
 		return (RecipeFactory)getEFactoryInstance();
 	}
@@ -566,15 +539,14 @@ public class RecipePackageImpl extends EPackageImpl implements RecipePackage {
 		createEReference(authorEClass, AUTHOR__WRITES);
 
 		workstepEClass = createEClass(WORKSTEP);
-		createEAttribute(workstepEClass, WORKSTEP__NAME);
 		createEAttribute(workstepEClass, WORKSTEP__STEP_NUMBER);
 		createEReference(workstepEClass, WORKSTEP__IS_SUCCESSOR);
 		createEReference(workstepEClass, WORKSTEP__IS_PREDECESSOR);
-		createEReference(workstepEClass, WORKSTEP__DURATION);
 		createEAttribute(workstepEClass, WORKSTEP__DESCRIPTION);
 		createEReference(workstepEClass, WORKSTEP__CONTAINS);
 		createEReference(workstepEClass, WORKSTEP__NEEDS);
 		createEReference(workstepEClass, WORKSTEP__REQUIRES);
+		createEAttribute(workstepEClass, WORKSTEP__DURATION);
 
 		machineEClass = createEClass(MACHINE);
 		createEAttribute(machineEClass, MACHINE__NAME);
@@ -587,19 +559,15 @@ public class RecipePackageImpl extends EPackageImpl implements RecipePackage {
 		createEAttribute(recipeEClass, RECIPE__SERVINGS);
 		createEAttribute(recipeEClass, RECIPE__DIFFICULTY);
 		createEAttribute(recipeEClass, RECIPE__TOTAL_PRICE);
-		createEAttribute(recipeEClass, RECIPE__CATEGORY);
 		createEReference(recipeEClass, RECIPE__WORKSTEP);
 		createEAttribute(recipeEClass, RECIPE__TOTAL_DURATION);
 		createEReference(recipeEClass, RECIPE__WRITTEN_BY);
+		createEAttribute(recipeEClass, RECIPE__TYPE);
 
 		toolEClass = createEClass(TOOL);
 		createEAttribute(toolEClass, TOOL__NAME);
 		createEAttribute(toolEClass, TOOL__PURPOSE);
 		createEReference(toolEClass, TOOL__REQUIRED_IN);
-
-		durationEClass = createEClass(DURATION);
-		createEAttribute(durationEClass, DURATION__HOURS);
-		createEAttribute(durationEClass, DURATION__MINUTES);
 
 		ingredientEClass = createEClass(INGREDIENT);
 		createEAttribute(ingredientEClass, INGREDIENT__NAME);
@@ -611,6 +579,7 @@ public class RecipePackageImpl extends EPackageImpl implements RecipePackage {
 
 		// Create enums
 		foodEEnum = createEEnum(FOOD);
+		recipeTypeEEnum = createEEnum(RECIPE_TYPE);
 	}
 
 	/**
@@ -649,15 +618,14 @@ public class RecipePackageImpl extends EPackageImpl implements RecipePackage {
 		initEReference(getAuthor_Writes(), this.getRecipe(), this.getRecipe_WrittenBy(), "writes", null, 0, -1, Author.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(workstepEClass, Workstep.class, "Workstep", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getWorkstep_Name(), ecorePackage.getEString(), "name", null, 0, 1, Workstep.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getWorkstep_StepNumber(), ecorePackage.getEInt(), "stepNumber", "1", 0, 1, Workstep.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getWorkstep_IsSuccessor(), this.getWorkstep(), null, "isSuccessor", null, 0, -1, Workstep.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getWorkstep_IsPredecessor(), this.getWorkstep(), null, "isPredecessor", null, 0, -1, Workstep.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getWorkstep_Duration(), this.getDuration(), null, "duration", null, 0, -1, Workstep.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getWorkstep_Description(), ecorePackage.getEString(), "description", null, 0, 1, Workstep.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getWorkstep_Contains(), this.getIngredient(), this.getIngredient_ContainedIn(), "contains", null, 0, -1, Workstep.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getWorkstep_Needs(), this.getMachine(), this.getMachine_NeededIn(), "needs", null, 0, -1, Workstep.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getWorkstep_Requires(), this.getTool(), this.getTool_RequiredIn(), "requires", null, 0, -1, Workstep.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getWorkstep_Duration(), ecorePackage.getEString(), "duration", null, 0, 1, Workstep.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(machineEClass, Machine.class, "Machine", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMachine_Name(), ecorePackage.getEString(), "name", null, 0, 1, Machine.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -670,19 +638,15 @@ public class RecipePackageImpl extends EPackageImpl implements RecipePackage {
 		initEAttribute(getRecipe_Servings(), ecorePackage.getEInt(), "servings", "1", 0, 1, Recipe.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRecipe_Difficulty(), ecorePackage.getEInt(), "difficulty", "1", 0, 1, Recipe.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRecipe_TotalPrice(), ecorePackage.getEDouble(), "totalPrice", null, 0, 1, Recipe.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEAttribute(getRecipe_Category(), ecorePackage.getEString(), "category", null, 0, 1, Recipe.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEReference(getRecipe_Workstep(), this.getWorkstep(), null, "workstep", null, 1, -1, Recipe.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRecipe_TotalDuration(), ecorePackage.getEString(), "totalDuration", null, 0, 1, Recipe.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEReference(getRecipe_WrittenBy(), this.getAuthor(), this.getAuthor_Writes(), "writtenBy", null, 1, 1, Recipe.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRecipe_Type(), this.getRecipeType(), "type", null, 0, 1, Recipe.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(toolEClass, Tool.class, "Tool", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTool_Name(), ecorePackage.getEString(), "name", null, 0, 1, Tool.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTool_Purpose(), ecorePackage.getEString(), "purpose", null, 0, 1, Tool.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTool_RequiredIn(), this.getWorkstep(), this.getWorkstep_Requires(), "requiredIn", null, 1, -1, Tool.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(durationEClass, Duration.class, "Duration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getDuration_Hours(), ecorePackage.getEInt(), "hours", "0", 0, 1, Duration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getDuration_Minutes(), ecorePackage.getEInt(), "minutes", "1", 0, 1, Duration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(ingredientEClass, Ingredient.class, "Ingredient", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getIngredient_Name(), ecorePackage.getEString(), "name", null, 0, 1, Ingredient.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -694,10 +658,16 @@ public class RecipePackageImpl extends EPackageImpl implements RecipePackage {
 
 		// Initialize enums and add enum literals
 		initEEnum(foodEEnum, Food.class, "Food");
-		addEEnumLiteral(foodEEnum, Food.VEGGY);
-		addEEnumLiteral(foodEEnum, Food.ANIMALLY);
-		addEEnumLiteral(foodEEnum, Food.LIQUID);
-		addEEnumLiteral(foodEEnum, Food.OTHER);
+		addEEnumLiteral(foodEEnum, Food.VEGETERIAN);
+		addEEnumLiteral(foodEEnum, Food.VEGAN);
+		addEEnumLiteral(foodEEnum, Food.POULTRY);
+		addEEnumLiteral(foodEEnum, Food.FISH);
+		addEEnumLiteral(foodEEnum, Food.MEAT);
+
+		initEEnum(recipeTypeEEnum, RecipeType.class, "RecipeType");
+		addEEnumLiteral(recipeTypeEEnum, RecipeType.NORMAL);
+		addEEnumLiteral(recipeTypeEEnum, RecipeType.VEGAN);
+		addEEnumLiteral(recipeTypeEEnum, RecipeType.VEGETERIAN);
 
 		// Create resource
 		createResource(eNS_URI);

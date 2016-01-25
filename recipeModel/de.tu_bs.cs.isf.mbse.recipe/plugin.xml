@@ -10,8 +10,7 @@
       <!-- @generated Recipe -->
       <package
             uri="https://tu-bs.de/isf/recipe"
-            class="de.tu_bs.cs.isf.mbse.recipe.RecipePackage"
-            genModel="model/Recipe.genmodel"/>
+            class="de.tu_bs.cs.isf.mbse.recipe.RecipePackage"/>
    </extension>
 
 </plugin>

@@ -15,15 +15,14 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link de.tu_bs.cs.isf.mbse.recipe.Workstep#getName <em>Name</em>}</li>
  *   <li>{@link de.tu_bs.cs.isf.mbse.recipe.Workstep#getStepNumber <em>Step Number</em>}</li>
  *   <li>{@link de.tu_bs.cs.isf.mbse.recipe.Workstep#getIsSuccessor <em>Is Successor</em>}</li>
  *   <li>{@link de.tu_bs.cs.isf.mbse.recipe.Workstep#getIsPredecessor <em>Is Predecessor</em>}</li>
- *   <li>{@link de.tu_bs.cs.isf.mbse.recipe.Workstep#getDuration <em>Duration</em>}</li>
  *   <li>{@link de.tu_bs.cs.isf.mbse.recipe.Workstep#getDescription <em>Description</em>}</li>
  *   <li>{@link de.tu_bs.cs.isf.mbse.recipe.Workstep#getContains <em>Contains</em>}</li>
  *   <li>{@link de.tu_bs.cs.isf.mbse.recipe.Workstep#getNeeds <em>Needs</em>}</li>
  *   <li>{@link de.tu_bs.cs.isf.mbse.recipe.Workstep#getRequires <em>Requires</em>}</li>
+ *   <li>{@link de.tu_bs.cs.isf.mbse.recipe.Workstep#getDuration <em>Duration</em>}</li>
  * </ul>
  *
  * @see de.tu_bs.cs.isf.mbse.recipe.RecipePackage#getWorkstep()
@@ -31,32 +30,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface Workstep extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see #setName(String)
-	 * @see de.tu_bs.cs.isf.mbse.recipe.RecipePackage#getWorkstep_Name()
-	 * @model
-	 * @generated
-	 */
-	String getName();
-
-	/**
-	 * Sets the value of the '{@link de.tu_bs.cs.isf.mbse.recipe.Workstep#getName <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
-	 * @see #getName()
-	 * @generated
-	 */
-	void setName(String value);
-
 	/**
 	 * Returns the value of the '<em><b>Step Number</b></em>' attribute.
 	 * The default value is <code>"1"</code>.
@@ -171,20 +144,30 @@ public interface Workstep extends EObject {
 	EList<Ingredient> getContains();
 
 	/**
-	 * Returns the value of the '<em><b>Duration</b></em>' containment reference list.
-	 * The list contents are of type {@link de.tu_bs.cs.isf.mbse.recipe.Duration}.
+	 * Returns the value of the '<em><b>Duration</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Duration</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Duration</em>' containment reference list.
+	 * @return the value of the '<em>Duration</em>' attribute.
+	 * @see #setDuration(String)
 	 * @see de.tu_bs.cs.isf.mbse.recipe.RecipePackage#getWorkstep_Duration()
-	 * @model containment="true"
+	 * @model
 	 * @generated
 	 */
-	EList<Duration> getDuration();
+	String getDuration();
+
+	/**
+	 * Sets the value of the '{@link de.tu_bs.cs.isf.mbse.recipe.Workstep#getDuration <em>Duration</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Duration</em>' attribute.
+	 * @see #getDuration()
+	 * @generated
+	 */
+	void setDuration(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Description</b></em>' attribute.

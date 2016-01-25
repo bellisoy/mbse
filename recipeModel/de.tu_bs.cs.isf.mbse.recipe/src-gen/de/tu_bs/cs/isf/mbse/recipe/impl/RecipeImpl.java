@@ -5,6 +5,7 @@ package de.tu_bs.cs.isf.mbse.recipe.impl;
 import de.tu_bs.cs.isf.mbse.recipe.Author;
 import de.tu_bs.cs.isf.mbse.recipe.Recipe;
 import de.tu_bs.cs.isf.mbse.recipe.RecipePackage;
+import de.tu_bs.cs.isf.mbse.recipe.RecipeType;
 import de.tu_bs.cs.isf.mbse.recipe.Workstep;
 
 import java.util.Collection;
@@ -36,10 +37,10 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link de.tu_bs.cs.isf.mbse.recipe.impl.RecipeImpl#getServings <em>Servings</em>}</li>
  *   <li>{@link de.tu_bs.cs.isf.mbse.recipe.impl.RecipeImpl#getDifficulty <em>Difficulty</em>}</li>
  *   <li>{@link de.tu_bs.cs.isf.mbse.recipe.impl.RecipeImpl#getTotalPrice <em>Total Price</em>}</li>
- *   <li>{@link de.tu_bs.cs.isf.mbse.recipe.impl.RecipeImpl#getCategory <em>Category</em>}</li>
  *   <li>{@link de.tu_bs.cs.isf.mbse.recipe.impl.RecipeImpl#getWorkstep <em>Workstep</em>}</li>
  *   <li>{@link de.tu_bs.cs.isf.mbse.recipe.impl.RecipeImpl#getTotalDuration <em>Total Duration</em>}</li>
  *   <li>{@link de.tu_bs.cs.isf.mbse.recipe.impl.RecipeImpl#getWrittenBy <em>Written By</em>}</li>
+ *   <li>{@link de.tu_bs.cs.isf.mbse.recipe.impl.RecipeImpl#getType <em>Type</em>}</li>
  * </ul>
  *
  * @generated
@@ -146,26 +147,6 @@ public class RecipeImpl extends MinimalEObjectImpl.Container implements Recipe {
 	protected double totalPrice = TOTAL_PRICE_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getCategory() <em>Category</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCategory()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String CATEGORY_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getCategory() <em>Category</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCategory()
-	 * @generated
-	 * @ordered
-	 */
-	protected String category = CATEGORY_EDEFAULT;
-
-	/**
 	 * The cached value of the '{@link #getWorkstep() <em>Workstep</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -204,6 +185,26 @@ public class RecipeImpl extends MinimalEObjectImpl.Container implements Recipe {
 	 * @ordered
 	 */
 	protected Author writtenBy;
+
+	/**
+	 * The default value of the '{@link #getType() <em>Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getType()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final RecipeType TYPE_EDEFAULT = RecipeType.NORMAL;
+
+	/**
+	 * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getType()
+	 * @generated
+	 * @ordered
+	 */
+	protected RecipeType type = TYPE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -334,27 +335,6 @@ public class RecipeImpl extends MinimalEObjectImpl.Container implements Recipe {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getCategory() {
-		return category;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setCategory(String newCategory) {
-		String oldCategory = category;
-		category = newCategory;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, RecipePackage.RECIPE__CATEGORY, oldCategory, category));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EList<Workstep> getWorkstep() {
 		if (workstep == null) {
 			workstep = new EObjectContainmentEList<Workstep>(Workstep.class, this, RecipePackage.RECIPE__WORKSTEP);
@@ -420,6 +400,27 @@ public class RecipeImpl extends MinimalEObjectImpl.Container implements Recipe {
 		}
 		else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, RecipePackage.RECIPE__WRITTEN_BY, newWrittenBy, newWrittenBy));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public RecipeType getType() {
+		return type;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setType(RecipeType newType) {
+		RecipeType oldType = type;
+		type = newType == null ? TYPE_EDEFAULT : newType;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, RecipePackage.RECIPE__TYPE, oldType, type));
 	}
 
 	/**
@@ -493,8 +494,6 @@ public class RecipeImpl extends MinimalEObjectImpl.Container implements Recipe {
 				return getDifficulty();
 			case RecipePackage.RECIPE__TOTAL_PRICE:
 				return getTotalPrice();
-			case RecipePackage.RECIPE__CATEGORY:
-				return getCategory();
 			case RecipePackage.RECIPE__WORKSTEP:
 				return getWorkstep();
 			case RecipePackage.RECIPE__TOTAL_DURATION:
@@ -502,6 +501,8 @@ public class RecipeImpl extends MinimalEObjectImpl.Container implements Recipe {
 			case RecipePackage.RECIPE__WRITTEN_BY:
 				if (resolve) return getWrittenBy();
 				return basicGetWrittenBy();
+			case RecipePackage.RECIPE__TYPE:
+				return getType();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -530,9 +531,6 @@ public class RecipeImpl extends MinimalEObjectImpl.Container implements Recipe {
 			case RecipePackage.RECIPE__TOTAL_PRICE:
 				setTotalPrice((Double)newValue);
 				return;
-			case RecipePackage.RECIPE__CATEGORY:
-				setCategory((String)newValue);
-				return;
 			case RecipePackage.RECIPE__WORKSTEP:
 				getWorkstep().clear();
 				getWorkstep().addAll((Collection<? extends Workstep>)newValue);
@@ -542,6 +540,9 @@ public class RecipeImpl extends MinimalEObjectImpl.Container implements Recipe {
 				return;
 			case RecipePackage.RECIPE__WRITTEN_BY:
 				setWrittenBy((Author)newValue);
+				return;
+			case RecipePackage.RECIPE__TYPE:
+				setType((RecipeType)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -570,9 +571,6 @@ public class RecipeImpl extends MinimalEObjectImpl.Container implements Recipe {
 			case RecipePackage.RECIPE__TOTAL_PRICE:
 				setTotalPrice(TOTAL_PRICE_EDEFAULT);
 				return;
-			case RecipePackage.RECIPE__CATEGORY:
-				setCategory(CATEGORY_EDEFAULT);
-				return;
 			case RecipePackage.RECIPE__WORKSTEP:
 				getWorkstep().clear();
 				return;
@@ -581,6 +579,9 @@ public class RecipeImpl extends MinimalEObjectImpl.Container implements Recipe {
 				return;
 			case RecipePackage.RECIPE__WRITTEN_BY:
 				setWrittenBy((Author)null);
+				return;
+			case RecipePackage.RECIPE__TYPE:
+				setType(TYPE_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -604,14 +605,14 @@ public class RecipeImpl extends MinimalEObjectImpl.Container implements Recipe {
 				return difficulty != DIFFICULTY_EDEFAULT;
 			case RecipePackage.RECIPE__TOTAL_PRICE:
 				return totalPrice != TOTAL_PRICE_EDEFAULT;
-			case RecipePackage.RECIPE__CATEGORY:
-				return CATEGORY_EDEFAULT == null ? category != null : !CATEGORY_EDEFAULT.equals(category);
 			case RecipePackage.RECIPE__WORKSTEP:
 				return workstep != null && !workstep.isEmpty();
 			case RecipePackage.RECIPE__TOTAL_DURATION:
 				return TOTAL_DURATION_EDEFAULT == null ? totalDuration != null : !TOTAL_DURATION_EDEFAULT.equals(totalDuration);
 			case RecipePackage.RECIPE__WRITTEN_BY:
 				return writtenBy != null;
+			case RecipePackage.RECIPE__TYPE:
+				return type != TYPE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -636,10 +637,10 @@ public class RecipeImpl extends MinimalEObjectImpl.Container implements Recipe {
 		result.append(difficulty);
 		result.append(", totalPrice: ");
 		result.append(totalPrice);
-		result.append(", category: ");
-		result.append(category);
 		result.append(", totalDuration: ");
 		result.append(totalDuration);
+		result.append(", type: ");
+		result.append(type);
 		result.append(')');
 		return result.toString();
 	}
