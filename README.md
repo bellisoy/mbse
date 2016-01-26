@@ -1,2 +1,0 @@
-# mbse
-MBSE project
